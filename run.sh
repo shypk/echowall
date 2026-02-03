@@ -11,5 +11,5 @@ else
 fi
 
 
-sudo docker run -d -p 8080:8080 -v ./conf.d:/etc/nginx/conf.d -v ./echoroot/:/etc/nginx/echoroot/ $image_name
+sudo docker run -d -p 8080:8080 -p 8443:8443 -v ./conf.d:/etc/nginx/conf.d -v ./echoroot/:/etc/nginx/echoroot/ -v ./ssl/:/etc/nginx/ssl/  $image_name
 
